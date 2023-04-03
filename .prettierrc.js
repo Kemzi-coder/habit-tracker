@@ -6,5 +6,5 @@ module.exports = {
   printWidth: 80,
   arrowParens: "avoid",
   trailingComma: "none",
-  bracketSameLine: true
+  bracketSameLine: false
 };
