@@ -1,6 +1,6 @@
 import React from "react";
-import {SafeAreaView} from "react-native";
+import AuthPage from "./app/screens/Auth/AuthPage";
 
-const App = () => <SafeAreaView />;
+const App = () => <AuthPage />;
 
 export default App;
