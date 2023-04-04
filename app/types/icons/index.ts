@@ -1,10 +1,8 @@
-import {IconNames} from "../../utils/constants/icons";
+import {ColorValue} from "react-native";
 
 export interface IconProps {
-	color: string;
+	color: ColorValue;
 	thickness: number;
 	width: number;
 	height: number;
 }
-
-export type IconName = IconNames;

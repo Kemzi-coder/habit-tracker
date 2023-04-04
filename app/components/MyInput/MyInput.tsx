@@ -1,14 +1,11 @@
 import React, {FC} from "react";
 import {TextInput, TextInputProps, View} from "react-native";
 import {useThemeContext} from "../../contexts/themeContext";
+import {MyInputProps} from "../../types/components/myInput";
+import {IconSizes} from "../../utils/constants/theme";
 import MyIcon from "../MyIcon/MyIcon";
 import styles from "./MyInput.styles";
-import {MyInputProps} from "../../types/components/myInput";
-import {
-	START_ICON_HEIGHT,
-	START_ICON_VARIANT,
-	START_ICON_WIDTH
-} from "../../utils/constants/components/myInput";
+import {IconVariants} from "../../utils/constants/icons";
 
 /** Custom text input component. */
 const MyInput: FC<MyInputProps & TextInputProps> = ({
@@ -16,34 +13,39 @@ const MyInput: FC<MyInputProps & TextInputProps> = ({
 	startIconName,
 	startIconColor,
 	startIconThickness,
-	// TextInput component props
+	startIconVariant,
+	type,
 	...textInputProps
 }) => {
 	const theme = useThemeContext();
+	const iconVariant = startIconVariant || IconVariants.Outline;
 
 	// Input style dependent on the current theme
 	const inputStyle = {
-		padding: theme.spacing.m,
-		backgroundColor: theme.colors.primary
+		paddingVertical: theme.spacing.m,
+		paddingLeft: theme.iconSizes.s.width + theme.spacing.m * 2,
+		paddingRight: theme.spacing.m,
+		backgroundColor: theme.colors.primary,
+		color: theme.colors.text,
+		...theme.textVariants.body
 	};
 
 	return (
 		<View>
 			<TextInput
+				secureTextEntry={type === "password"}
+				cursorColor={theme.colors.foreground}
 				style={[inputStyle, styles.input, style]}
 				placeholderTextColor={theme.colors.primaryLight}
-				// eslint-disable-next-line react/jsx-props-no-spreading
 				{...textInputProps}
 			/>
 			{/* Icon on the start of the input field */}
 			<MyIcon
 				name={startIconName}
 				color={startIconColor}
-				thickness={startIconThickness}
-				height={START_ICON_HEIGHT}
-				width={START_ICON_WIDTH}
-				variant={START_ICON_VARIANT}
-				style={[{left: theme.spacing.m, top: "50%"}, styles.icon]}
+				size={IconSizes.S}
+				variant={iconVariant}
+				style={[{paddingLeft: theme.spacing.m}, styles.icon]}
 			/>
 		</View>
 	);

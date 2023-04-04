@@ -1,7 +1,7 @@
 import {Context, createContext, useContext} from "react";
 import {
-	ThemeContextValue,
-	ThemeContextHook
+	ThemeContextHook,
+	ThemeContextValue
 } from "../types/contexts/themeContext";
 import {theme} from "../utils/theme";
 

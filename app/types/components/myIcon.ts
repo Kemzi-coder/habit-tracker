@@ -1,9 +1,10 @@
 import {ViewProps} from "react-native/types";
-import {IconName, IconProps} from "../icons";
+import {IconNames, IconVariants} from "../../utils/constants/icons";
+import {Colors, IconSizes} from "../../utils/constants/theme";
 
-export type MyIconVariant = "outline" | "solid";
-
-export interface MyIconProps extends IconProps, ViewProps {
-	variant: MyIconVariant;
-	name: IconName;
+export interface MyIconProps extends ViewProps {
+	variant: IconVariants;
+	name: IconNames;
+	size: IconSizes;
+	color: Colors;
 }

@@ -1,7 +1,12 @@
-import {IconName} from "../icons";
+import {IconNames, IconVariants} from "../../utils/constants/icons";
+import {Colors} from "../../utils/constants/theme";
+
+type MyInputType = "password" | "text";
 
 export interface MyInputProps {
-	startIconName: IconName;
-	startIconColor: string;
+	startIconName: IconNames;
+	startIconColor: Colors;
 	startIconThickness: number;
+	type?: MyInputType;
+	startIconVariant?: IconVariants;
 }
