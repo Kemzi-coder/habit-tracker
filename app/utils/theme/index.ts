@@ -1,69 +1,66 @@
 import {Theme} from "../../types/utils/theme";
-import {
-	ButtonSizes,
-	ColorPalette,
-	Colors,
-	IconSizes,
-	SpacingSizes,
-	TextFonts,
-	TextVariants
-} from "../constants/theme";
+import {ColorPalette, TextFonts} from "../constants/theme";
 
 /** Main theme of the app. @readonly */
 export const theme: Theme = {
 	colors: {
-		[Colors.Background]: ColorPalette.Gray,
-		[Colors.Foreground]: ColorPalette.White,
-		[Colors.Text]: ColorPalette.White,
-		[Colors.Primary]: ColorPalette.DarkGray,
-		[Colors.PrimaryLight]: ColorPalette.LightGray,
-		[Colors.Accent]: ColorPalette.Orange
+		background: ColorPalette.Gray,
+		foreground: ColorPalette.White,
+		text: ColorPalette.White,
+		primary: ColorPalette.DarkGray,
+		primaryLight: ColorPalette.LightGray,
+		accent: ColorPalette.Orange
 	},
 	spacing: {
-		[SpacingSizes.S]: 8,
-		[SpacingSizes.M]: 16,
-		[SpacingSizes.L]: 24,
-		[SpacingSizes.XL]: 40
+		s: 8,
+		m: 16,
+		l: 24,
+		xl: 40
 	},
 	iconSizes: {
-		[IconSizes.S]: {
+		s: {
 			width: 18,
 			height: 18,
 			thickness: 1.3
 		},
-		[IconSizes.M]: {
+		m: {
 			width: 28,
 			height: 28,
 			thickness: 1.3
 		},
-		[IconSizes.L]: {
+		l: {
 			width: 38,
 			height: 38,
 			thickness: 1.3
 		}
 	},
 	textVariants: {
-		[TextVariants.Header]: {
+		header: {
 			fontSize: 36,
-			fontFamily: TextFonts.RobotoMedium,
+			fontFamily: TextFonts.Medium,
 			textTransform: "none"
 		},
-		[TextVariants.Body]: {
+		body: {
 			fontSize: 16,
-			fontFamily: TextFonts.RobotoRegular,
+			fontFamily: TextFonts.Regular,
 			textTransform: "none"
 		},
-		[TextVariants.Button]: {
+		button: {
 			fontSize: 16,
-			fontFamily: TextFonts.RobotoMedium,
+			fontFamily: TextFonts.Medium,
 			textTransform: "uppercase"
+		},
+		link: {
+			fontSize: 16,
+			fontFamily: TextFonts.Medium,
+			textTransform: "none"
 		}
 	},
 	buttonSizes: {
-		[ButtonSizes.L]: {
+		l: {
 			paddingVertical: 16,
 			paddingHorizontal: 40,
-			textVariant: TextVariants.Button
+			textVariant: "button"
 		}
 	}
 };

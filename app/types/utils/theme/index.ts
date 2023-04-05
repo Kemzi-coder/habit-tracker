@@ -1,46 +1,58 @@
 import {TextStyle} from "react-native";
-import {
-	ButtonSizes,
-	ColorPalette,
-	Colors,
-	IconSizes,
-	SpacingSizes,
-	TextFonts,
-	TextVariants
-} from "../../../utils/constants/theme";
+import {ColorPalette, TextFonts} from "../../../utils/constants/theme";
 
-interface TextVariant {
+export type SpacingSize = "s" | "m" | "l" | "xl";
+
+export type IconSize = "s" | "m" | "l";
+
+export type IconName = "email" | "lock" | "user";
+
+export type IconVariant = "outline" | "solid";
+
+export type TextVariant = "header" | "body" | "button" | "link";
+
+export type ButtonSize = "l";
+
+export type Color =
+	| "background"
+	| "foreground"
+	| "text"
+	| "primary"
+	| "primaryLight"
+	| "accent";
+
+interface ITextVariant {
 	fontSize: number;
 	fontFamily: TextFonts;
 	textTransform: TextStyle["textTransform"];
 }
 
-interface IconSize {
+interface IIconSize {
 	width: number;
 	height: number;
 	thickness: number;
 }
 
-interface ButtonSize {
+interface IButtonSize {
 	paddingVertical: number;
 	paddingHorizontal: number;
-	textVariant: TextVariants;
+	textVariant: TextVariant;
 }
 
 export interface Theme {
 	colors: {
-		[key in Colors]: ColorPalette;
+		[key in Color]: ColorPalette;
 	};
 	spacing: {
-		[key in SpacingSizes]: number;
+		[key in SpacingSize]: number;
 	};
 	iconSizes: {
-		[key in IconSizes]: IconSize;
+		[key in IconSize]: IIconSize;
 	};
 	textVariants: {
-		[key in TextVariants]: TextVariant;
+		[key in TextVariant]: ITextVariant;
 	};
 	buttonSizes: {
-		[key in ButtonSizes]: ButtonSize;
+		[key in ButtonSize]: IButtonSize;
 	};
 }
