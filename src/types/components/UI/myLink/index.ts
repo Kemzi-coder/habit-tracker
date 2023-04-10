@@ -1,6 +1,4 @@
-import {PressableProps} from "react-native";
-
-export interface MyLinkProps extends PressableProps {
+export interface MyLinkProps {
 	text: string;
 	link?: string;
 	color?: string;

@@ -5,7 +5,12 @@ import {MyInputProps} from "types/components/UI";
 import MyIcon from "../MyIcon/MyIcon";
 import styles from "./MyInput.styles";
 
-/** Custom text input component. */
+/**
+ * A customizable input field component with an optional icon on the start.
+ * @component
+ * @param {(import("react-native").TextInputProps | import("types/components/UI").MyInputProps)} props - Component props
+ * @return {JSX.Element} View component
+ */
 const MyInput: FC<MyInputProps & TextInputProps> = ({
 	style,
 	startIconName,

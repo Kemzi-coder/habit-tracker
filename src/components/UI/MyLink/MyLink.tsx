@@ -1,10 +1,21 @@
 import React, {FC} from "react";
-import {GestureResponderEvent, Linking, Pressable} from "react-native";
+import {
+	GestureResponderEvent,
+	Linking,
+	Pressable,
+	PressableProps
+} from "react-native";
 import {useThemeContext} from "contexts";
 import {MyLinkProps} from "types/components/UI";
 import MyText from "../MyText/MyText";
 
-const MyLink: FC<MyLinkProps> = ({
+/**
+ * A component that renders a clickable link with custom text.
+ * @component
+ * @param {(import("types/components/UI").MyLinkProps | import("react-native").PressableProps)} props - Component props
+ * @returns {JSX.Element} A Pressable component with a MyText component inside
+ */
+const MyLink: FC<MyLinkProps & PressableProps> = ({
 	text,
 	link,
 	color,

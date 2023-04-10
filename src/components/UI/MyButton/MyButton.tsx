@@ -1,11 +1,17 @@
 import React, {FC} from "react";
-import {Pressable, StyleProp, ViewStyle} from "react-native";
+import {Pressable, PressableProps, StyleProp, ViewStyle} from "react-native";
 import {useThemeContext} from "contexts";
 import {MyButtonProps} from "types/components/UI";
 import MyText from "../MyText/MyText";
 import styles from "./MyButton.styles";
 
-const MyButton: FC<MyButtonProps> = ({
+/**
+ * Custom button component.
+ * @component
+ * @param {(import("types/components/UI").MyButtonProps | import("react-native").PressableProps)} props - Component props
+ * @return {JSX.Element} Pressable component
+ */
+const MyButton: FC<MyButtonProps & PressableProps> = ({
 	text,
 	size,
 	style,

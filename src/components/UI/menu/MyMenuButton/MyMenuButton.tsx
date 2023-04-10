@@ -3,6 +3,12 @@ import {Pressable, PressableProps} from "react-native";
 import {MyMenuButtonProps} from "types/components/UI/menu";
 import MyIcon from "../../MyIcon/MyIcon";
 
+/**
+ * A reusable button component for MyMenu.
+ * @component
+ * @param {(import("types/components/UI/menu").MyMenuButtonProps | import("react-native").PressableProps)} props - Component props
+ * @returns {JSX.Element} A Pressable component with an icon
+ */
 const MyMenuButton: FC<MyMenuButtonProps & PressableProps> = ({
 	iconName,
 	isActive,

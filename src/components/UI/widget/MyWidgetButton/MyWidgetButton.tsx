@@ -5,6 +5,12 @@ import {Pressable, PressableProps, StyleProp, ViewStyle} from "react-native";
 import {MyWidgetButtonProps} from "types/components/UI/widget";
 import styles from "./MyWidgetButton.styles";
 
+/**
+	A reusable button component that renders an icon and provides feedback to user interactions.
+	@component
+	@param {(import("types/components/UI/widget").MyWidgetButtonProps | import("react-native").PressableProps)} props - Component props
+	@returns {JSX.Element} Pressable component with MyIcon component inside
+*/
 const MyWidgetButton: FC<MyWidgetButtonProps & PressableProps> = ({
 	backgroundColor,
 	iconColor,

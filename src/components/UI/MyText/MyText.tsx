@@ -1,9 +1,15 @@
 import React, {FC} from "react";
-import {Text} from "react-native";
+import {Text, TextProps} from "react-native";
 import {useThemeContext} from "contexts";
 import {MyTextProps} from "types/components/UI";
 
-const MyText: FC<MyTextProps> = ({
+/**
+	A custom Text component.
+	@component
+	@param {(import("types/components/UI").MyTextProps | import("react-native").TextProps)} props - Component props
+	@returns {JSX.Element} Text component
+*/
+const MyText: FC<MyTextProps & TextProps> = ({
 	variant,
 	text,
 	color,

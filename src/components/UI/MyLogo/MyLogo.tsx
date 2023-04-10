@@ -1,10 +1,16 @@
 import React, {FC} from "react";
-import {View} from "react-native";
+import {View, ViewProps} from "react-native";
 import {Path, Svg} from "react-native-svg";
 import {useThemeContext} from "contexts";
 import {MyLogoProps} from "types/components/UI";
 
-const MyLogo: FC<MyLogoProps> = ({color, ...viewProps}) => {
+/**
+ * MyLogo component displays a logo made with SVG paths.
+ * @component
+ * @param {(import("types/components/UI").MyLogoProps | import("react-native").ViewProps)} props - Component props
+ * @returns {JSX.Element} View component with svg inside
+ */
+const MyLogo: FC<MyLogoProps & ViewProps> = ({color, ...viewProps}) => {
 	const theme = useThemeContext();
 	const pathFill = color ? theme.colors[color] : theme.colors.accent;
 

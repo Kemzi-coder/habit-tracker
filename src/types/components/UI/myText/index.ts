@@ -1,7 +1,6 @@
-import {TextProps} from "react-native";
 import {Color, TextVariant} from "../../../theme";
 
-export interface MyTextProps extends TextProps {
+export interface MyTextProps {
 	variant?: TextVariant;
 	text: string | number;
 	color?: Color;

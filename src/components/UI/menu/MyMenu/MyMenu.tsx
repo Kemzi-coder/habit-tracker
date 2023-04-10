@@ -1,13 +1,25 @@
 import {useThemeContext} from "contexts/themeContext";
 import React, {FC} from "react";
-import {FlatList, ListRenderItem, Pressable, View} from "react-native";
+import {
+	FlatList,
+	ListRenderItem,
+	Pressable,
+	View,
+	ViewProps
+} from "react-native";
 import {MyMenuProps, MyMenuListButton} from "types/components/UI/menu";
 import {WINDOW_WIDTH} from "utils/constants";
 import {MyIcon} from "components/UI";
 import styles from "./MyMenu.styles";
 import MyMenuButton from "../MyMenuButton/MyMenuButton";
 
-const MyMenu: FC<MyMenuProps> = ({
+/**
+ * A custom menu component that renders a horizontal list of menu buttons.
+ * @component
+ * @param {(import("types/components/UI/menu").MyMenuProps | import("react-native").ViewProps)} props - Component props
+ * @returns {JSX.Element} View component with FlatList and Pressable components inside
+ */
+const MyMenu: FC<MyMenuProps & ViewProps> = ({
 	leftButtonList,
 	rightButtonList,
 	backgroundColor,

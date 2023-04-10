@@ -1,9 +1,19 @@
 import React, {FC} from "react";
-import {View} from "react-native";
+import {View, ViewProps} from "react-native";
 import {useThemeContext} from "contexts";
 import {MySpacerProps} from "types/components/UI";
 
-const MySpacer: FC<MySpacerProps> = ({size, isHorizontal = false}) => {
+/**
+	A spacer component that renders a View with a specified size and direction.
+	@component
+	@param {(import("types/components/UI").MySpacerProps | import("react-native").ViewProps)} props - Component props
+	@returns {JSX.Element} A View component with the specified size and orientation
+*/
+const MySpacer: FC<MySpacerProps & ViewProps> = ({
+	size,
+	isHorizontal = false,
+	...viewProps
+}) => {
 	const theme = useThemeContext();
 	const spacerSize = size ? theme.spacing[size] : theme.spacing.m;
 	const defaultValue = "auto";
@@ -13,7 +23,7 @@ const MySpacer: FC<MySpacerProps> = ({size, isHorizontal = false}) => {
 		height: !isHorizontal ? spacerSize : defaultValue
 	};
 
-	return <View style={viewStyle} />;
+	return <View style={viewStyle} {...viewProps} />;
 };
 
 export default MySpacer;

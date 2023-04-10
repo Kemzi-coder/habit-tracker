@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import {View} from "react-native";
+import {View, ViewProps} from "react-native";
 import {useThemeContext} from "contexts";
 import {MyIconProps} from "types/components/UI";
 import {
@@ -14,8 +14,13 @@ import {
 } from "components/icons";
 import HomeSolidIcon from "components/icons/HomeSolidIcon/HomeSolidIcon";
 
-/** Universal icon component. */
-const MyIcon: FC<MyIconProps> = ({
+/**
+	Universal icon component.
+	@component
+	@param {(import("types/components/UI").MyIconProps | import("react-native").ViewProps)} props - Component props
+	@return {JSX.Element} Icon inside a View
+*/
+const MyIcon: FC<MyIconProps & ViewProps> = ({
 	variant,
 	name,
 	size,
