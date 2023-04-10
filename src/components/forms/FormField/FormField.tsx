@@ -27,7 +27,6 @@ const FormField: FC<FormFieldProps> = ({
 				<MyInput
 					placeholder={placeholder}
 					startIconColor="primaryLight"
-					startIconThickness={1.3}
 					startIconName={startIconName}
 					onChangeText={onChange}
 					value={value}

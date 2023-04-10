@@ -1,11 +1,20 @@
 import {TextStyle} from "react-native";
-import {ColorPalette, TextFonts} from "../../utils/constants/theme";
+import {ColorPalette, TextFonts} from "utils/constants/theme";
 
 type SpacingSize = "s" | "m" | "l" | "xl";
 
 type IconSize = "s" | "m" | "l";
 
-type IconName = "email" | "lock" | "user";
+type IconName =
+	| "email"
+	| "lock"
+	| "user"
+	| "home"
+	| "plus"
+	| "minus"
+	| "play"
+	| "pause"
+	| "stop";
 
 type IconVariant = "outline" | "solid";
 

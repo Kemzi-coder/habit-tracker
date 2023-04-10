@@ -25,7 +25,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
 	return (
 		<View style={containerStyle}>
 			<KeyboardAvoidingView behavior="padding" style={styles.formContainer}>
-				<MyLogo color="accent" />
+				<MyLogo />
 				<MySpacer size="l" />
 				<MyText variant="header" text={title} />
 				<MySpacer size="s" />

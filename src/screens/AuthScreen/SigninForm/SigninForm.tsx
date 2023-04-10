@@ -37,7 +37,7 @@ const SigninForm: FC<SigninFormProps> = ({onLinkPress}) => {
 				rules={{required: true}}
 				startIconName="email"
 			/>
-			<MySpacer size="m" />
+			<MySpacer />
 			<FormField
 				control={control}
 				error={errors.password}

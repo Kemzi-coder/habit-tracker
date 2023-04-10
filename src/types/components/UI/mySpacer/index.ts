@@ -1,6 +1,6 @@
-import {SpacingSize} from "../../../theme";
+import {SpacingSize} from "types/theme";
 
 export interface MySpacerProps {
-	size: SpacingSize;
+	size?: SpacingSize;
 	isHorizontal?: boolean;
 }

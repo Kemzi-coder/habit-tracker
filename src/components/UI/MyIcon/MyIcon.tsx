@@ -5,8 +5,14 @@ import {MyIconProps} from "types/components/UI";
 import {
 	UserOutlineIcon,
 	LockOutlineIcon,
-	EmailOutlineIcon
+	EmailOutlineIcon,
+	PlaySolidIcon,
+	PauseSolidIcon,
+	PlusOutlineIcon,
+	MinusOutlineIcon,
+	StopSolidIcon
 } from "components/icons";
+import HomeSolidIcon from "components/icons/HomeSolidIcon/HomeSolidIcon";
 
 /** Universal icon component. */
 const MyIcon: FC<MyIconProps> = ({
@@ -39,6 +45,41 @@ const MyIcon: FC<MyIconProps> = ({
 			case "user":
 				icon = (
 					<UserOutlineIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			case "plus":
+				icon = (
+					<PlusOutlineIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			case "minus":
+				icon = (
+					<MinusOutlineIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			default:
+				break;
+		}
+	} else {
+		switch (name) {
+			case "home":
+				icon = (
+					<HomeSolidIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			case "play":
+				icon = (
+					<PlaySolidIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			case "pause":
+				icon = (
+					<PauseSolidIcon {...{color: iconColor, height, width, thickness}} />
+				);
+				break;
+			case "stop":
+				icon = (
+					<StopSolidIcon {...{color: iconColor, height, width, thickness}} />
 				);
 				break;
 			default:

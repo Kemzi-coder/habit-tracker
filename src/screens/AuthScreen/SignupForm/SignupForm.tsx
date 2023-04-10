@@ -44,7 +44,7 @@ const SignupForm: FC<SignupFormProps> = ({onLinkPress}) => {
 				rules={{required: true}}
 				startIconName="user"
 			/>
-			<MySpacer size="m" />
+			<MySpacer />
 			<FormField
 				control={control}
 				error={errors.email}
@@ -53,7 +53,7 @@ const SignupForm: FC<SignupFormProps> = ({onLinkPress}) => {
 				rules={{required: true}}
 				startIconName="email"
 			/>
-			<MySpacer size="m" />
+			<MySpacer />
 			<FormField
 				control={control}
 				error={errors.password}

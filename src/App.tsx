@@ -10,12 +10,10 @@ const Stack = createNativeStackNavigator();
 const App = () => (
 	<NavigationContainer>
 		<SafeAreaProvider>
-			<Stack.Navigator screenOptions={{animation: "slide_from_right"}}>
-				<Stack.Screen
-					options={{headerShown: false}}
-					name={Screens.Auth}
-					component={AuthScreen}
-				/>
+			<Stack.Navigator
+				screenOptions={{animation: "slide_from_right", headerShown: false}}
+			>
+				<Stack.Screen name={Screens.Auth} component={AuthScreen} />
 				<Stack.Screen name={Screens.Home} component={HomeScreen} />
 			</Stack.Navigator>
 		</SafeAreaProvider>

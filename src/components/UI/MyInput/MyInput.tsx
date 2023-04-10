@@ -10,7 +10,6 @@ const MyInput: FC<MyInputProps & TextInputProps> = ({
 	style,
 	startIconName,
 	startIconColor,
-	startIconThickness,
 	startIconVariant,
 	type,
 	...textInputProps

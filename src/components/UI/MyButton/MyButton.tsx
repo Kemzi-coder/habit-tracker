@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import {Pressable} from "react-native";
+import {Pressable, StyleProp, ViewStyle} from "react-native";
 import {useThemeContext} from "contexts";
 import {MyButtonProps} from "types/components/UI";
 import MyText from "../MyText/MyText";
@@ -20,13 +20,14 @@ const MyButton: FC<MyButtonProps> = ({
 
 	const {paddingVertical, paddingHorizontal, textVariant} = buttonSize;
 
-	const buttonStyle = [
+	const buttonStyle: StyleProp<ViewStyle> = [
 		{
 			paddingVertical,
 			paddingHorizontal,
 			backgroundColor: buttonBackgroundColor
 		},
-		styles.button
+		styles.button,
+		style as StyleProp<ViewStyle>
 	];
 
 	return (

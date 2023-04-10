@@ -1,5 +1,5 @@
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {Screens} from "../../utils/constants/navigation";
+import {Screens} from "utils/constants/navigation";
 
 type AppNavigationProp = NativeStackNavigationProp<
 	{[Screens.Auth]: undefined; [Screens.Home]: undefined},
