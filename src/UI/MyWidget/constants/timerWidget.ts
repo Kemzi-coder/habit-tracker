@@ -1,0 +1,3 @@
+const TIMER_UPDATE_TIME = 1000;
+
+export {TIMER_UPDATE_TIME};
